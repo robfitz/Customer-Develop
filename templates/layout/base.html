@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <style>
+    	body { font-family: "Arial"; }
+    	textarea { font-family:"Arial"; }
+    	{% block style %}{% endblock %}
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	     {% block script %}{% endblock %}
+    </script>
+</head>
+<body>
+
+	{% block header %}
+      {% if breadcrumbs %}
+        {% for crumb in breadcrumbs %}
+          {% if crumb.url %}<a href="{% endif %}{{ crumb.url }}{% if crumb.url %}">{% endif %}{{ crumb.name }}{% if crumb.url %}</a>{% endif %}
+          {% if not forloop.last %} &gt; {% endif %}
+        {% endfor %}
+      |&nbsp;
+      {% endif %}
+      {% if request.user.is_authenticated %}
+        <a href="/logout">Log out</a>
+      {% else %}
+        <a href="/login">Sign in</a> or <a href="/register">create account</a>
+      {% endif %}
+      <hr>
+	{% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+      <hr>
+      <a href="">About</a> | <a href="">Privacy</a> | <a href="">Help</a>
+    {% endblock %}
+
+</body>
+</html>

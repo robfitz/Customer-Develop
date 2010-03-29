@@ -1,0 +1,70 @@
+[{"pk": 1, "model": "mycd.step", "fields": {"name": "Customer Discovery"}}
+, {"pk": 2, "model": "mycd.step", "fields": {"name": "Customer Validation"}}
+, {"pk": 1, "model": "mycd.substepcategory", "fields": {"step": 1, "name": "State Your Hypotheses"}}
+, {"pk": 2, "model": "mycd.substepcategory", "fields": {"step": 1, "name": "Test Problem Hypotheses"}}
+, {"pk": 3, "model": "mycd.substepcategory", "fields": {"step": 1, "name": "Test Product Hypotheses"}}
+, {"pk": 4, "model": "mycd.substepcategory", "fields": {"step": 1, "name": "Verify"}}
+, {"pk": 5, "model": "mycd.substepcategory", "fields": {"step": 2, "name": "Get Ready to Sell"}}
+, {"pk": 6, "model": "mycd.substepcategory", "fields": {"step": 2, "name": "Sell to Earlyvangelists"}}
+, {"pk": 7, "model": "mycd.substepcategory", "fields": {"step": 2, "name": "Develop Positioning"}}
+, {"pk": 8, "model": "mycd.substepcategory", "fields": {"step": 2, "name": "Verify"}}
+, {"pk": 9, "model": "mycd.substepcategory", "fields": {"step": 1, "name": "Get Buy-in"}}
+, {"pk": 1, "model": "mycd.substep", "fields": {"name": "Product Hypothesis", "substepcategory": 1}}
+, {"pk": 2, "model": "mycd.substep", "fields": {"name": "Customer Hypothesis", "substepcategory": 1}}
+, {"pk": 3, "model": "mycd.substep", "fields": {"name": "Problem Hypothesis", "substepcategory": 1}}
+, {"pk": 4, "model": "mycd.substep", "fields": {"name": "Distribution Hypothesis", "substepcategory": 1}}
+, {"pk": 5, "model": "mycd.substep", "fields": {"name": "Pricing Hypothesis", "substepcategory": 1}}
+, {"pk": 6, "model": "mycd.substep", "fields": {"name": "Demand Creation Hypothesis", "substepcategory": 1}}
+, {"pk": 7, "model": "mycd.substep", "fields": {"name": "Market Type Hypothesis", "substepcategory": 1}}
+, {"pk": 8, "model": "mycd.substep", "fields": {"name": "Competitive Hypothesis", "substepcategory": 1}}
+, {"pk": 9, "model": "mycd.substep", "fields": {"name": "Friendly First Contacts", "substepcategory": 2}}
+, {"pk": 10, "model": "mycd.substep", "fields": {"name": "Problem Presentation", "substepcategory": 2}}
+, {"pk": 11, "model": "mycd.substep", "fields": {"name": "Customer Understanding", "substepcategory": 2}}
+, {"pk": 12, "model": "mycd.substep", "fields": {"name": "Market Knowledge", "substepcategory": 2}}
+, {"pk": 13, "model": "mycd.substep", "fields": {"name": "First Reality Check", "substepcategory": 3}}
+, {"pk": 14, "model": "mycd.substep", "fields": {"name": "Product Presentation", "substepcategory": 3}}
+, {"pk": 15, "model": "mycd.substep", "fields": {"name": "Yet More Customer Visits", "substepcategory": 3}}
+, {"pk": 16, "model": "mycd.substep", "fields": {"name": "Second Reality Check", "substepcategory": 3}}
+, {"pk": 17, "model": "mycd.substep", "fields": {"name": "First Advisory Board", "substepcategory": 3}}
+, {"pk": 18, "model": "mycd.substep", "fields": {"name": "Verify the Problem", "substepcategory": 4}}
+, {"pk": 19, "model": "mycd.substep", "fields": {"name": "Verify the Product", "substepcategory": 4}}
+, {"pk": 20, "model": "mycd.substep", "fields": {"name": "Verify the Business Model", "substepcategory": 4}}
+, {"pk": 21, "model": "mycd.substep", "fields": {"name": "Iterate or Exit", "substepcategory": 4}}
+, {"pk": 22, "model": "mycd.substep", "fields": {"name": "Articulate Value Proposition", "substepcategory": 5}}
+, {"pk": 23, "model": "mycd.substep", "fields": {"name": "Preliminary Sales & Collateral Materials", "substepcategory": 5}}
+, {"pk": 24, "model": "mycd.substep", "fields": {"name": "Preliminary Distribution Channel", "substepcategory": 5}}
+, {"pk": 25, "model": "mycd.substep", "fields": {"name": "Preliminary Sales Roadmap", "substepcategory": 5}}
+, {"pk": 26, "model": "mycd.substep", "fields": {"name": "Hire a Sales Closer", "substepcategory": 5}}
+, {"pk": 27, "model": "mycd.substep", "fields": {"name": "Align Executives", "substepcategory": 5}}
+, {"pk": 28, "model": "mycd.substep", "fields": {"name": "Formalize Advisory Board", "substepcategory": 5}}
+, {"pk": 29, "model": "mycd.substep", "fields": {"name": "Contact Earlyvangelists", "substepcategory": 6}}
+, {"pk": 30, "model": "mycd.substep", "fields": {"name": "Sell to Earlyvangelists", "substepcategory": 6}}
+, {"pk": 31, "model": "mycd.substep", "fields": {"name": "Refine Sales Roadmap", "substepcategory": 6}}
+, {"pk": 32, "model": "mycd.substep", "fields": {"name": "Sell to Channel Partners", "substepcategory": 6}}
+, {"pk": 33, "model": "mycd.substep", "fields": {"name": "Refine Channel Roadmap", "substepcategory": 6}}
+, {"pk": 34, "model": "mycd.substep", "fields": {"name": "Product Positioning", "substepcategory": 7}}
+, {"pk": 35, "model": "mycd.substep", "fields": {"name": "Company Positioning", "substepcategory": 7}}
+, {"pk": 36, "model": "mycd.substep", "fields": {"name": "Present to Analysts & Influencers", "substepcategory": 7}}
+, {"pk": 37, "model": "mycd.substep", "fields": {"name": "Verify the Product", "substepcategory": 8}}
+, {"pk": 38, "model": "mycd.substep", "fields": {"name": "Verify the Sales Roadmap", "substepcategory": 8}}
+, {"pk": 39, "model": "mycd.substep", "fields": {"name": "Verify the Channel Roadmap", "substepcategory": 8}}
+, {"pk": 40, "model": "mycd.substep", "fields": {"name": "Verify the Business Model", "substepcategory": 8}}
+, {"pk": 41, "model": "mycd.substep", "fields": {"name": "Iterate or Exit", "substepcategory": 8}}
+, {"pk": 42, "model": "mycd.substep", "fields": {"name": "Get Board & Management Buy-in", "substepcategory": 9}}
+, {"pk": 43, "model": "mycd.substep", "fields": {"name": "The Team", "substepcategory": 9}}
+, {"pk": 1, "model": "mycd.worksheet", "fields": {"substep": 42}}
+, {"pk": 2, "model": "mycd.worksheet", "fields": {"substep": 43}}
+, {"pk": 3, "model": "mycd.worksheet", "fields": {"substep": 43}}
+, {"pk": 4, "model": "mycd.worksheet", "fields": {"substep": 43}}
+, {"pk": 1, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Is there board and founding team buy-in for the CD process?", "worksheet": 1}}
+, {"pk": 2, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Which market type do we think we\u2019re in? ", "worksheet": 1}}
+, {"pk": 3, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "How much funding will we need for 2-3 passes around discovery & validation?", "worksheet": 1}}
+, {"pk": 4, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Is there enough funding for 2-3 passes? ", "worksheet": 1}}
+, {"pk": 5, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "How long will we stay in discovery and validation?", "worksheet": 1}}
+, {"pk": 6, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Who is the business visionary?", "worksheet": 2}}
+, {"pk": 7, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Who is the business execution?", "worksheet": 2}}
+, {"pk": 8, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Who is the product visionary?", "worksheet": 2}}
+, {"pk": 9, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "Who is the product execution?", "worksheet": 2}}
+, {"pk": 10, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "What is your mission statement? This should be around 2 paragraphs describing your vision for the product, business, and market.", "worksheet": 3}}
+, {"pk": 11, "model": "mycd.question", "fields": {"timestamp": null, "prompt": "What are the 3 to 5 core values the founding team believes in?", "worksheet": 4}}
+]

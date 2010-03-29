@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<h2>Register</h2>
+
+
+<form method="post" action=".">
+<table>
+{{ form }}
+</table>
+
+<input type="submit" value="Sign Up" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+Already have an account? <a href="/login">Go log in</a>
+
+{% endblock %}

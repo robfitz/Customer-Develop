@@ -1,0 +1,1283 @@
+[
+    {
+        "pk": 1, 
+        "model": "mycd.step", 
+        "fields": {
+            "name": "Customer Discovery"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.step", 
+        "fields": {
+            "name": "Customer Validation"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 1, 
+            "name": "State Your Hypotheses"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 1, 
+            "name": "Test Problem Hypotheses"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 1, 
+            "name": "Verify"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 2, 
+            "name": "Get Ready to Sell"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 2, 
+            "name": "Sell to Earlyvangelists"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 2, 
+            "name": "Develop Positioning"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 2, 
+            "name": "Verify"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 1, 
+            "name": "Get Buy-in"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "mycd.substepcategory", 
+        "fields": {
+            "step": 1, 
+            "name": "Test Product Hypotheses"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Product Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Friendly First Contacts", 
+            "substepcategory": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Verify the Problem", 
+            "substepcategory": 3
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Articulate Value Proposition", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Preliminary Sales & Collateral Materials", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Preliminary Distribution Channel", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Preliminary Sales Roadmap", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Hire a Sales Closer", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Align Executives", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Formalize Advisory Board", 
+            "substepcategory": 4
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Contact Earlyvangelists", 
+            "substepcategory": 5
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Sell to Earlyvangelists", 
+            "substepcategory": 5
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Refine Sales Roadmap", 
+            "substepcategory": 5
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Sell to Channel Partners", 
+            "substepcategory": 5
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Refine Channel Roadmap", 
+            "substepcategory": 5
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Product Positioning", 
+            "substepcategory": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Company Positioning", 
+            "substepcategory": 6
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Present to Analysts & Influencers", 
+            "substepcategory": 6
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Verify the Product", 
+            "substepcategory": 7
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Verify the Sales Roadmap", 
+            "substepcategory": 7
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Verify the Channel Roadmap", 
+            "substepcategory": 7
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Verify the Business Model", 
+            "substepcategory": 7
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Iterate or Exit", 
+            "substepcategory": 7
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "Get Board & Management Buy-in", 
+            "substepcategory": 8
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "1", 
+            "name": "The Team", 
+            "substepcategory": 8
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "2", 
+            "name": "Customer Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "2", 
+            "name": "Problem Presentation", 
+            "substepcategory": 2
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "2", 
+            "name": "Verify the Product", 
+            "substepcategory": 3
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "3", 
+            "name": "Problem Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "3", 
+            "name": "Customer Understanding", 
+            "substepcategory": 2
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "3", 
+            "name": "Verify the Business Model", 
+            "substepcategory": 3
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "4", 
+            "name": "Distribution Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "4", 
+            "name": "Market Knowledge", 
+            "substepcategory": 2
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "4", 
+            "name": "Iterate or Exit", 
+            "substepcategory": 3
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "5", 
+            "name": "Pricing Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "5", 
+            "name": "First Reality Check", 
+            "substepcategory": 9
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "6", 
+            "name": "Demand Creation Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "6", 
+            "name": "Product Presentation", 
+            "substepcategory": 9
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "7", 
+            "name": "Market Type Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "7", 
+            "name": "Yet More Customer Visits", 
+            "substepcategory": 9
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "8", 
+            "name": "Competitive Hypothesis", 
+            "substepcategory": 1
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "8", 
+            "name": "Second Reality Check", 
+            "substepcategory": 9
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "mycd.substep", 
+        "fields": {
+            "order": "9", 
+            "name": "First Advisory Board", 
+            "substepcategory": 9
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": null, 
+            "substep": 24, 
+            "name": " Get Board & Management Buy-in", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": null, 
+            "substep": 25, 
+            "name": " The Team", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": null, 
+            "substep": 25, 
+            "name": "Vision & values", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": null, 
+            "substep": 1, 
+            "name": "Product Overview", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": "", 
+            "substep": 26, 
+            "name": "Identification", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": "", 
+            "substep": 29, 
+            "name": "Customer Problems", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": "featureWorksheet", 
+            "substep": 1, 
+            "name": "Features", 
+            "order": "2"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": "", 
+            "substep": 26, 
+            "name": "Understanding", 
+            "order": "2"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "custom_view": "", 
+            "substep": 1, 
+            "name": "IP & Dependency Analysis", 
+            "order": "3"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " Have you educated the board & founding team about customer development?", 
+            "order": "0", 
+            "field_rows": 4, 
+            "details": "You got to got to teach to take!"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " Is there board and founding team buy-in for the CD process?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 2, 
+            "prompt": " Who is the business visionary?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 2, 
+            "prompt": " Who is the business execution?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 2, 
+            "prompt": " Who is the product visionary?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 2, 
+            "prompt": " Who is the product execution?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 3, 
+            "prompt": " What is your mission statement? This should be around 2 paragraphs describing your vision for the product, business, and market.", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 3, 
+            "prompt": " What are the 3 to 5 core values the founding team believes in?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 4, 
+            "prompt": "What problem are you solving? What is the general goal of the product?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 6, 
+            "prompt": "What intellectual property of ours will be unique? What will be patented or considered a trade secret?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Who are the day-to-day users of the product?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "What is the biggest pain your customer has?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 9, 
+            "prompt": "Which products do your customers already use?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 5, 
+            "prompt": "What are the features of your product? (no more than 10!)", 
+            "order": "1", 
+            "field_rows": 2, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " Which market type do we think we\u2019re in? ", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 4, 
+            "prompt": "What is the total cost of ownership of your product, including training, deployment, and additional personnel/tech infrastructure?", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 6, 
+            "prompt": "Have you checked to see if anyone else has important IP in our space?", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Who are the influencers and recommenders?", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "Is the pain the same on all levels of the company? If not, how does it vary?", 
+            "order": "2", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 9, 
+            "prompt": "How would your product change their daily lives? How about their lives?", 
+            "order": "2", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 5, 
+            "prompt": "What is the customer benefit of each feature?", 
+            "order": "2", 
+            "field_rows": 2, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " How much funding will we need for 2-3 passes around discovery & validation?", 
+            "order": "3", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 4, 
+            "prompt": "Upload a simplified architectural diagram", 
+            "order": "3", 
+            "field_rows": 1, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 6, 
+            "prompt": "What IP of other's will we need to license, infringe on, or work around?", 
+            "order": "3", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Whose budget will pay for it?", 
+            "order": "3", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "If your customers could wave a magic wand and change anything, what would it be?", 
+            "order": "3", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 9, 
+            "prompt": "Summarize a day in the life of your customers", 
+            "order": "3", 
+            "field_rows": 16, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " Is there enough funding for 2-3 passes? ", 
+            "order": "4", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Is there is an existing budget or will one need to be approved?", 
+            "order": "4", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "What do people do today to solve their problem without your product? ", 
+            "order": "4", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 9, 
+            "prompt": "What is the smallest feature set they would pay for?", 
+            "order": "4", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 1, 
+            "prompt": " How long will we stay in discovery and validation?", 
+            "order": "5", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Who are the decision makers?", 
+            "order": "5", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "Where on the problem recognition scale is each type of customer? (latent need, active need, or visionary)", 
+            "order": "5", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Who else needs to approve the purchase?", 
+            "order": "6", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "What is the organizational impact of this pain -- individual, departmental, corporate? Personal, household?", 
+            "order": "6", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 7, 
+            "prompt": "Where will you find your visionary first paying customers? In what role, type of company and industry segment?", 
+            "order": "7", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 8, 
+            "prompt": "Is this a mission-critical, have-to-have product or a luxury nice-to-have?", 
+            "order": "7", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 1, 
+            "answer": "yes!", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 2, 
+            "answer": "there is!", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 9, 
+            "answer": "re-segmented!", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 10, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 11, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 21:42:53", 
+            "question": 12, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 3, 
+            "timestamp": "2010-03-20 21:43:23", 
+            "question": 9, 
+            "answer": "re-segmented by niche (lean startups)", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 4, 
+            "timestamp": "2010-03-20 21:43:23", 
+            "question": 10, 
+            "answer": "20k!", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 5, 
+            "timestamp": "2010-03-20 21:43:23", 
+            "question": 11, 
+            "answer": "yes, but it's personal money", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 6, 
+            "timestamp": "2010-03-20 21:43:23", 
+            "question": 12, 
+            "answer": "as long as is needed", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:25:49", 
+            "question": 3, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:25:50", 
+            "question": 4, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:25:50", 
+            "question": 5, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:25:50", 
+            "question": 6, 
+            "answer": "", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 1, 
+            "timestamp": "2010-03-20 22:46:08", 
+            "question": 1, 
+            "answer": "that sounds smart!", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 15, 
+            "timestamp": "2010-03-20 22:55:12", 
+            "question": 1, 
+            "answer": "N/A while a one-man show. will educate new team recruits before they sign", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 2, 
+            "timestamp": "2010-03-20 22:55:12", 
+            "question": 2, 
+            "answer": "there is (again, for just my current army of one)", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 7, 
+            "timestamp": "2010-03-20 22:55:12", 
+            "question": 9, 
+            "answer": "re-segmented by niche (CRM & salesflow for lean startups)", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 8, 
+            "timestamp": "2010-03-20 22:55:13", 
+            "question": 10, 
+            "answer": "i need $30k, though only $10k in cash (rest is personal living expense)\r\n\r\n2 months / pass * 3 passes = 6 months\r\n\r\n1x founder @ 40k = 20k\r\n2x interns @ 20k = 10k\r\n\r\n", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 11, 
+            "timestamp": "2010-03-20 22:56:47", 
+            "question": 3, 
+            "answer": "rob", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 12, 
+            "timestamp": "2010-03-20 22:56:47", 
+            "question": 4, 
+            "answer": "rob - customer dev\r\n\r\nwill only need a sales closer if investors are key customer type (as opposed to self-serve startups)", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 13, 
+            "timestamp": "2010-03-20 22:56:48", 
+            "question": 5, 
+            "answer": "rob", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 14, 
+            "timestamp": "2010-03-20 22:56:48", 
+            "question": 6, 
+            "answer": "rob short term\r\n\r\nhoping to build the foundation then outsource content creation (worksheets, etc)\r\n\r\nwill hire more help when pain is felt", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:59:45", 
+            "question": 7, 
+            "answer": "my mission is to structure the customer development process, thereby making it easier to follow and helping companies to succeed.\r\n\r\nthe product is a customer development dashboard. the primary interaction is filling out worksheets. there is also an earlyvangelist CRM and a community element for connecting lean entrepreneurs", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-20 22:59:45", 
+            "question": 8, 
+            "answer": "We believe in encouraging more people to start companies and in helping to make those companies more successful", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }
+]

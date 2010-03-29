@@ -1,0 +1,112 @@
+{% extends 'layout/base.html' %}
+
+{% block script %}
+
+  var last_qid;
+
+  $(document).ready(function(){
+    $(".small").click(function(event){
+      //alert("As you can see, the link no longer took you to jquery.com");
+      event.preventDefault();
+    });
+  });
+
+	function open(question_id) {
+		if (question_id != last_qid) {
+	    	closeInfo(last_qid);
+	    	last_qid = question_id;
+	    }
+	    $("#bracket_" + question_id).show(0);
+    	$("#closeinfo_" + question_id).show(0);
+	}
+
+  function learn(question_id) {
+  	open(question_id)
+    $("#versioninfo_" + question_id).hide(0);
+    $("#learninfo_" + question_id).show(0);
+
+    var h = $("#learninfo_" + question_id).css('height');
+	$("#bracket_" + question_id).css('height', h);
+  }
+
+  function version(question_id, prompt, answer) {
+      showVersion(question_id, prompt, answer);
+      open(question_id);
+      $("#learninfo_" + question_id).hide(0);
+      $("#versioninfo_" + question_id).show(0);
+
+	  var h = $("#versioninfo_" + question_id).css('height');
+	  $("#bracket_" + question_id).css('height', h);
+   }
+
+   function closeInfo(question_id) {
+   		$("#bracket_" + question_id).hide(0);
+        $("#versioninfo_" + question_id).hide(0);
+        $("#learninfo_" + question_id).hide(0);
+        $("#closeinfo_" + question_id).hide(0);
+   }
+
+	function showVersion(question_id, prompt, answer) {
+		$("#versiontext_" + question_id).html(
+			"Q: <i>" + prompt + "</i>" +
+			"<p />" +
+			"A: " + answer
+
+		 	);
+		var h = $("#versioninfo_" + question_id).css('height');
+		$("#bracket_" + question_id).css('height', h);
+	}
+
+	function cleanQuotes(str) {
+		str = str.replaceAll("'", "\\'");
+		str = str.replaceAll("\"", "\\\"");
+		return str;
+	}
+
+{% endblock %}
+
+{% block style %}
+  .invisible { display:none; }
+  .small { font-size:11px; }
+{% endblock %}
+
+{% block title %}
+  {% if worksheet %}
+    {{ worksheet }}
+  {% else %}
+    Customer Development Worksheet
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+  {% block nav %}
+	  {% if prevWorksheet %}
+		<a href="/worksheet/{{ prevWorksheet.pk }}">Previous Worksheet</a> |&nbsp;
+	  {% else %}
+		You are on the first worksheet |&nbsp;
+	  {% endif %}
+	  {% if nextWorksheet %}
+		<a href="/worksheet/{{ nextWorksheet.pk }}">Next Worksheet</a>
+	  {% else %}
+		You are on the final worksheet!
+	  {% endif %}
+  {% endblock %}
+
+
+  {% if worksheet %}
+    <h2>{{ worksheet }}</h2>
+	{% block form %}
+		<form method="POST" action=".">
+		  <p>
+		  <table style="margin:0px;">
+		  {% for question in questions %}
+			{% include "worksheets/question.html" %}
+		  {% endfor %}
+		  </table>
+		  </p>
+		  <input type="submit" value="Submit" />
+		</form>
+	{% endblock %}
+  {% endif %}
+{% endblock %}

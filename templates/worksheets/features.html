@@ -1,0 +1,65 @@
+{% extends 'worksheets/worksheet.html' %}
+
+{% block script %}
+
+	{{ block.super }}
+
+	function addRow() {
+		var numFields = $('#fields tr').length + 1;
+		alert(numFields);
+		var row = "<tr id='tr_" + numFields + "'>";
+		{% for question in questions %}
+			row += "<td><textarea id='id_{{ question.pk }}' name='{{ question.pk }}'></textarea></td>";
+		{% endfor %}
+		row += "<td><a href='' onClick=\"removeRow('tr_" + numFields + "')\" class='small'>Remove row</a></td>";
+		row += "</tr>";
+		$('#fields').append(row);
+
+		$(".small").click(function(event){
+			//alert("As you can see, the link no longer took you to jquery.com");
+			event.preventDefault();
+		});
+
+	}
+
+	function removeRow(id) {
+		$('#' + id).detach();
+	}
+
+{% endblock %}
+
+{% block form %}
+	<form method="post" action=".">
+
+		<table id='fields' style="margin:0px;">
+			<tr>
+			{% for question in questions %}
+				<td>{{ question.prompt }}</td>
+			{% endfor %}
+			</tr>
+			{% comment %}
+				{% include "worksheets/question.html" %}
+			{% endcomment %}
+
+			{% for r in rows %}
+				<tr id="tr_{{ forloop.counter }}">
+				{% for q in r %}
+						<td><textarea id="id_{{ q.pk }}" name="{{ q.pk }}">{{ q.answer }}</textarea></td>
+				{% endfor %}
+				{% if forloop.counter > 3 %}
+				<td><a href="" onClick="removeRow('tr_{{ forloop.counter }}')" class="small">Remove row</a></td>
+				{% endif %}
+			{% endfor %}
+		</table>
+
+		<a href="" onClick="addRow()" class="small">Add row</a> |&nbsp;
+		<a href="" onClick="removeRow('tr_2')" class="small">Remove row</a>
+		Change Order |&nbsp;
+		<input type="submit" value="Submit" />
+	</form>
+
+<script type="text/javascript">
+$(".small").css("background-color", "#f00");
+
+</script>
+{% endblock %}

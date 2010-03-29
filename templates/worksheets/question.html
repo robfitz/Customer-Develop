@@ -1,0 +1,46 @@
+<tr>
+	<td width="16" style="vertical-align:top">
+		{{ forloop.counter }})
+
+	<td id="form_{{ question.instance.pk }}" width="300">
+		{{ question.instance.prompt }}
+		<!--{{ question.as_p }}-->
+		<textarea id="id_{{question.instance.pk}}-answer" name="{{question.instance.pk}}-answer" rows="{{question.instance.field_rows}}" style="width:300px" >{{question.answer}}</textarea>
+		{% if question.instance.details %}
+			{% ifnotequal question.instance.details.message '' %}
+				<a id="learn_{{ question.instance.pk }}" class="small" href="" onClick="learn({{question.instance.pk}})">
+					Learn more
+				</a>&nbsp;
+			{% endifnotequal %}
+		{% endif %}
+		{% if question.answer.previous_version.answer %}
+			<a id="version_{{ question.instance.pk }}" class="small" href="" onClick="version({{question.instance.pk}}, '{{question.instance.prompt|escapejs}}', '{{question.answer.previous_version.answer|escapejs}}')">View previous versions</a>
+		{% endif %}
+
+	<td width="16" style="vertical-align:top">
+		<div style="position:absolute;".
+			<img style="float:left" class="invisible" id="bracket_{{ question.instance.pk }}" height="100%" width="16" src='/assets/full.gif' />
+		</div>
+
+	<td class="small" style="vertical-align:top;" width="250">
+		<div class="invisible" id="versioninfo_{{ question.instance.pk }}" style="position:absolute;width:250px;">
+		{% if question.answer.previous_version.answer %}
+			{% for v in question.answer.versions %}
+				<a href="" class="small" onClick="version({{question.instance.pk}}, '{{question.instance.prompt|escapejs}}', '{{v.answer|escapejs}}')" class="small" href="" onClick="version({{question.instance.pk}}, '{{question.instance.prompt|escapejs}}', '{{question.answer.previous_version.answer|escapejs}}')">V.{{ forloop.revcounter }}</a>&nbsp;
+			{% endfor %}
+			<p />
+			<div id="versiontext_{{ question.instance.pk }}" style="width:100%">
+				<!-- value set in worksheet.html javascript -->
+			</div>
+		{% endif %}
+		</div>
+		<div class="invisible" id="learninfo_{{ question.instance.pk }}" style="position:absolute;width:234px;">
+				{{ question.instance.details|urlizetrunc:25 }}
+		</div>
+
+	<td style="vertical-align:top;">
+		<a id="closeinfo_{{question.instance.pk}}" onClick=closeInfo({{question.instance.pk}}) href="" class="small invisible">Close</a>
+</tr>
+
+<tr height="20">
+</tr>

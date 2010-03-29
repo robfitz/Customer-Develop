@@ -1,0 +1,33 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Your Customer Development Dashboard{% endblock %}
+
+{% block content %}
+	{% if request.user %}
+	  <h2>Worksheets</h2>
+
+	  {% for s in substeps %}
+		{{ s }}
+		<ul>
+		{% for w in s.worksheets %}
+		  <li><a href="/worksheet/{{ w.pk }}">{{ w }}</a>
+		{% endfor %}
+		</ul>
+	  {% empty %}
+		No substeps :(
+	  {% endfor %}
+
+
+	  <h2>Contacts</h2>
+	  Coming soon!
+
+	  <h2>Pivots</h2>
+	  Coming soon!
+
+	  <h2>Community</h2>
+	  Coming soon!
+
+	{% else %}
+	  <h2>Log in to see the sweet, sweet candy</h2>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+Paste the question data below
+<ul>
+	<li>Tab or semicolon delimited
+	<li>Duplicates are fine
+	<li>This does <b>not</b> clear existing data
+</ul>
+
+<form naame='import_form' action='.' method='post'>
+	<textarea name='import_data' id='import_data'></textarea>
+	<p>
+	<input type='submit' value='submit' />
+	</p>
+</form>
+
+{% endblock %}
