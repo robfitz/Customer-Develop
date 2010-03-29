@@ -20,14 +20,14 @@
     	$("#closeinfo_" + question_id).show(0);
 	}
 
-  function learn(question_id) {
-  	open(question_id)
-    $("#versioninfo_" + question_id).hide(0);
-    $("#learninfo_" + question_id).show(0);
+	function learn(question_id) {
+		open(question_id)
+		$("#versioninfo_" + question_id).hide(0);
+		$("#learninfo_" + question_id).show(0);
 
-    var h = $("#learninfo_" + question_id).css('height');
-	$("#bracket_" + question_id).css('height', h);
-  }
+		var h = $("#learninfo_" + question_id).css('height');
+		$("#bracket_" + question_id).css('height', h);
+	}
 
   function version(question_id, prompt, answer) {
       showVersion(question_id, prompt, answer);
