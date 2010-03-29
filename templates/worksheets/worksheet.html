@@ -2,14 +2,14 @@
 
 {% block script %}
 
-  var last_qid;
+	var last_qid;
 
-  $(document).ready(function(){
-    $(".small").click(function(event){
-      //alert("As you can see, the link no longer took you to jquery.com");
-      event.preventDefault();
-    });
-  });
+  	$(document).ready(function(){
+    	$(".small").click(function(event){
+      		//alert("As you can see, the link no longer took you to jquery.com");
+	    	event.preventDefault();
+		});
+	});
 
 	function open(question_id) {
 		if (question_id != last_qid) {
