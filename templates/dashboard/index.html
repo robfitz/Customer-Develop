@@ -4,28 +4,32 @@
 
 {% block content %}
 	{% if request.user %}
-	  <h2>Worksheets</h2>
+		<h2>Worksheets</h2>
 
-	  {% for s in substeps %}
-		{{ s }}
-		<ul>
-		{% for w in s.worksheets %}
-		  <li><a href="/worksheet/{{ w.pk }}">{{ w }}</a>
+		{% for s in substeps %}
+			{{ s }}
+			<ul>
+			{% for w in s.worksheets %}
+				<li><a href="/worksheet/{{ w.pk }}">{{ w }}</a>
+			{% endfor %}
+			</ul>
+			{% empty %}
+			No substeps :(
 		{% endfor %}
-		</ul>
-	  {% empty %}
-		No substeps :(
-	  {% endfor %}
 
+		<h2>Contacts</h2>
+		<p>
+		<a href="/contacts/">View all contacts</a>
+		</p>
+		<p>
+		<a href="/contacts/00/">Create new contact</a>
+		</p>
 
-	  <h2>Contacts</h2>
-	  Coming soon!
+		<h2>Pivots</h2>
+		Coming soon!
 
-	  <h2>Pivots</h2>
-	  Coming soon!
-
-	  <h2>Community</h2>
-	  Coming soon!
+		<h2>Community</h2>
+		Coming soon!
 
 	{% else %}
 	  <h2>Log in to see the sweet, sweet candy</h2>

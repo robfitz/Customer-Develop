@@ -1,6 +1,86 @@
 [
     {
         "pk": 1, 
+        "model": "mycd.contact", 
+        "fields": {
+            "website": "http://www.sachinagarwal.com\t\r", 
+            "name": "Sachin Agarwal", 
+            "twitter": "@redivyprep\r", 
+            "company": "http://oneforty.com", 
+            "linked_in": "", 
+            "state": "Uncontacted", 
+            "owner": 14, 
+            "hacker_news": "HN sachinag\r", 
+            "email": "", 
+            "job_title": "Operations Lead"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "mycd.contact", 
+        "fields": {
+            "website": "http://danieltenner.com\r", 
+            "name": "Daniel Tenner", 
+            "twitter": "", 
+            "company": "http://woobius.com", 
+            "linked_in": "", 
+            "state": "Uncontacted", 
+            "owner": 14, 
+            "hacker_news": "HN swombat\r", 
+            "email": "", 
+            "job_title": "Founder"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "mycd.contact", 
+        "fields": {
+            "website": "http://www.apeofsteel.com/1354/why-ben-horowitzs-article-has-nothing-to-do-with-lean-startups\t\t\t\r", 
+            "name": "Dave Concannon", 
+            "twitter": "", 
+            "company": "", 
+            "linked_in": "", 
+            "state": "Uncontacted", 
+            "owner": 14, 
+            "hacker_news": "", 
+            "email": "shimoda@gmail.com\r", 
+            "job_title": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "mycd.contact", 
+        "fields": {
+            "website": "", 
+            "name": "David Binetti", 
+            "twitter": "@dbinetti\t\r", 
+            "company": "", 
+            "linked_in": "", 
+            "state": "Uncontacted", 
+            "owner": 14, 
+            "hacker_news": "", 
+            "email": "", 
+            "job_title": ""
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "mycd.contact", 
+        "fields": {
+            "website": "http://www.instigatorblog.com/a-great-case-study-of-customer-development-pirate-metrics-lean-startup/2009/09/21/\r", 
+            "name": "Ben Yoskovitz", 
+            "twitter": "@byosko\t\t\r", 
+            "company": "", 
+            "linked_in": "", 
+            "state": "Uncontacted", 
+            "owner": 14, 
+            "hacker_news": "", 
+            "email": "byosko@gmail.com", 
+            "job_title": ""
+        }
+    }, 
+    {
+        "pk": 1, 
         "model": "mycd.step", 
         "fields": {
             "name": "Customer Discovery"
@@ -476,8 +556,8 @@
         "pk": 1, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": null, 
             "substep": 24, 
+            "custom_view": null, 
             "name": " Get Board & Management Buy-in", 
             "order": "1"
         }
@@ -486,8 +566,8 @@
         "pk": 2, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": null, 
             "substep": 25, 
+            "custom_view": null, 
             "name": " The Team", 
             "order": "1"
         }
@@ -496,8 +576,8 @@
         "pk": 3, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": null, 
             "substep": 25, 
+            "custom_view": null, 
             "name": "Vision & values", 
             "order": "1"
         }
@@ -506,8 +586,8 @@
         "pk": 4, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": null, 
             "substep": 1, 
+            "custom_view": null, 
             "name": "Product Overview", 
             "order": "1"
         }
@@ -516,8 +596,8 @@
         "pk": 7, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": "", 
             "substep": 26, 
+            "custom_view": "", 
             "name": "Identification", 
             "order": "1"
         }
@@ -526,9 +606,39 @@
         "pk": 8, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": "", 
             "substep": 29, 
+            "custom_view": "", 
             "name": "Customer Problems", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "substep": 32, 
+            "custom_view": "", 
+            "name": "Sales channel", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "substep": 35, 
+            "custom_view": "", 
+            "name": "Market pricing", 
+            "order": "1"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "substep": 37, 
+            "custom_view": "", 
+            "name": "Demand creation", 
             "order": "1"
         }
     }, 
@@ -536,8 +646,8 @@
         "pk": 5, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": "featureWorksheet", 
             "substep": 1, 
+            "custom_view": "featureWorksheet", 
             "name": "Features", 
             "order": "2"
         }
@@ -546,9 +656,19 @@
         "pk": 9, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": "", 
             "substep": 26, 
+            "custom_view": "", 
             "name": "Understanding", 
+            "order": "2"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "mycd.worksheet", 
+        "fields": {
+            "substep": 35, 
+            "custom_view": "", 
+            "name": "Our pricing", 
             "order": "2"
         }
     }, 
@@ -556,8 +676,8 @@
         "pk": 6, 
         "model": "mycd.worksheet", 
         "fields": {
-            "custom_view": "", 
             "substep": 1, 
+            "custom_view": "", 
             "name": "IP & Dependency Analysis", 
             "order": "3"
         }
@@ -717,6 +837,50 @@
         }
     }, 
     {
+        "pk": 39, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 10, 
+            "prompt": "How will users initially buy from you? Through a direct salesperson, a rep or distributor, a partner, a retail store, mail order, on the web?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 11, 
+            "prompt": "How much do similar existing products cost?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "How many copies could you sell to each customer?", 
+            "order": "1", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 13, 
+            "prompt": "How will users hear about you? Advertising, word of mouth, seminars, partners...?", 
+            "order": "1", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
         "pk": 9, 
         "model": "mycd.question", 
         "fields": {
@@ -794,6 +958,50 @@
         }
     }, 
     {
+        "pk": 40, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 10, 
+            "prompt": "Upload a distribution channel diagram", 
+            "order": "2", 
+            "field_rows": 1, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 11, 
+            "prompt": "How much do customers spend to build custom solutions to the problem?", 
+            "order": "2", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "How many total units could you sell at $1 each?", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 13, 
+            "prompt": "", 
+            "order": "2", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
         "pk": 10, 
         "model": "mycd.question", 
         "fields": {
@@ -860,6 +1068,39 @@
         }
     }, 
     {
+        "pk": 41, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 10, 
+            "prompt": "How much will the channel cost in direct expenses & channel discounts", 
+            "order": "3", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 11, 
+            "prompt": "If in a new market, how much money does our product save the customer in time, money, expenses", 
+            "order": "3", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "How many at $1,000,000 each? What is the maximum price at which a unit would sell?", 
+            "order": "3", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
         "pk": 11, 
         "model": "mycd.question", 
         "fields": {
@@ -904,6 +1145,39 @@
         }
     }, 
     {
+        "pk": 42, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 10, 
+            "prompt": "What are the indirect costs? Presales support, channel promo dollars, etc.", 
+            "order": "4", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 11, 
+            "prompt": "Will we be changing the rules/models of pricing or following suit? If offering new pricing models, what are they?", 
+            "order": "4", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "At what price would half of potential customers say \"yes\"?", 
+            "order": "4", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
         "pk": 12, 
         "model": "mycd.question", 
         "fields": {
@@ -937,6 +1211,39 @@
         }
     }, 
     {
+        "pk": 43, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 10, 
+            "prompt": "Which others pieces & products are required for a customer to use or buy our product? How do they get those pieces?", 
+            "order": "5", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "What is your preliminary sales price?", 
+            "order": "5", 
+            "field_rows": 4, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 11, 
+            "prompt": "Would it be easier to sell if it were packaged differently? Sold in separate modules that each cost less? Combined with other products? Built into a full solution?", 
+            "order": "5", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
         "pk": 24, 
         "model": "mycd.question", 
         "fields": {
@@ -953,6 +1260,17 @@
         "fields": {
             "worksheet": 8, 
             "prompt": "What is the organizational impact of this pain -- individual, departmental, corporate? Personal, household?", 
+            "order": "6", 
+            "field_rows": 8, 
+            "details": null
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "mycd.question", 
+        "fields": {
+            "worksheet": 12, 
+            "prompt": "How many units will you sell in the first 12 and 24 months?", 
             "order": "6", 
             "field_rows": 8, 
             "details": null
@@ -1217,7 +1535,7 @@
             "question": 3, 
             "answer": "rob", 
             "owner": 14, 
-            "is_latest": true
+            "is_latest": false
         }
     }, 
     {
@@ -1276,6 +1594,258 @@
             "timestamp": "2010-03-20 22:59:45", 
             "question": 8, 
             "answer": "We believe in encouraging more people to start companies and in helping to make those companies more successful", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 20, 
+            "timestamp": "2010-03-21 12:31:33", 
+            "question": 3, 
+            "answer": "robrobrob!", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-21 15:04:13", 
+            "question": 37, 
+            "answer": "wheels;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": null, 
+            "timestamp": "2010-03-21 15:04:13", 
+            "question": 38, 
+            "answer": "rollin';;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 27, 
+            "timestamp": "2010-03-21 15:04:20", 
+            "question": 37, 
+            "answer": "wheels;pegs;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 28, 
+            "timestamp": "2010-03-21 15:04:20", 
+            "question": 38, 
+            "answer": "rollin';;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 29, 
+            "timestamp": "2010-03-21 15:04:30", 
+            "question": 37, 
+            "answer": "wheels;pegs;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 30, 
+            "timestamp": "2010-03-21 15:04:30", 
+            "question": 38, 
+            "answer": "rollin';;steerin'", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 31, 
+            "timestamp": "2010-03-21 15:53:03", 
+            "question": 37, 
+            "answer": "wheels;pegs;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 32, 
+            "timestamp": "2010-03-21 15:53:04", 
+            "question": 38, 
+            "answer": "rollin';;steerin'", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 33, 
+            "timestamp": "2010-03-21 15:53:39", 
+            "question": 37, 
+            "answer": "wheels;pegs;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 34, 
+            "timestamp": "2010-03-21 15:53:40", 
+            "question": 38, 
+            "answer": "rollin';;steerin';", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 35, 
+            "timestamp": "2010-03-21 16:07:37", 
+            "question": 37, 
+            "answer": "wheels;pegs;;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 36, 
+            "timestamp": "2010-03-21 16:07:37", 
+            "question": 38, 
+            "answer": "rollin';;steerin';;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 37, 
+            "timestamp": "2010-03-21 17:06:58", 
+            "question": 37, 
+            "answer": "wheels;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 38, 
+            "timestamp": "2010-03-21 17:06:59", 
+            "question": 38, 
+            "answer": "rollin';steerin'", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 39, 
+            "timestamp": "2010-03-21 17:08:05", 
+            "question": 37, 
+            "answer": "wheels;;;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 40, 
+            "timestamp": "2010-03-21 17:08:05", 
+            "question": 38, 
+            "answer": "rollin';steerin';;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 41, 
+            "timestamp": "2010-03-21 17:17:33", 
+            "question": 37, 
+            "answer": "wheels;;", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 42, 
+            "timestamp": "2010-03-21 17:17:33", 
+            "question": 38, 
+            "answer": "rollin';steerin';", 
+            "owner": 14, 
+            "is_latest": false
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 43, 
+            "timestamp": "2010-03-21 17:18:19", 
+            "question": 37, 
+            "answer": "wheels;handlebars;pegs", 
+            "owner": 14, 
+            "is_latest": true
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "mycd.answer", 
+        "fields": {
+            "previous_version": 44, 
+            "timestamp": "2010-03-21 17:18:19", 
+            "question": 38, 
+            "answer": "rollin';steerin';freeridin'", 
             "owner": 14, 
             "is_latest": true
         }

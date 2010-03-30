@@ -1,0 +1,53 @@
+{% extends 'layout/base.html' %}
+
+{% block style %}
+.table_header td {
+	font-weight:bold;
+	font-size: 14px;
+}
+td {
+	padding:8px;
+	vertical-align:top;
+	font-size:12px;
+}
+{% endblock %}
+
+{% block title %}
+  Contact Summary
+{% endblock %}
+
+{% block content %}
+	<h2>Contact Summary</h2>
+	<p>
+	<a href="/contacts/00/">Add new</a>
+	</p>
+	<table>
+		<tr class="table_header">
+			<td></td>
+			<td>Person</td>
+			<td>Status</td>
+			<td>Role Tags</td>
+		</tr>
+		{% for contact in contacts %}
+		<tr>
+			<td><a class="small" href="/contacts/{{ contact.pk }}/">edit</a>
+			<td width="300">
+			{{ contact.name }}
+			<br />
+			{{ contact.job_title }}
+			{% if contact.company %}
+			@ {{ contact.company }}
+			<br />
+			{% else %}{% if contact.job_title %}
+			<br />
+			{% endif %}{% endif %}
+
+			{% if contact.twitter %}<a href="http://twitter.com/{{ contact.twitter }}">{{ contact.twitter }}</a><br />{% endif %}
+
+			</td>
+			<td>{{ contact.state }}</td>
+			<td>Coming soon!</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

@@ -52,6 +52,7 @@ class QuestionAdmin(admin.ModelAdmin):
     def owner(self, model):
         return model.worksheet.user
     
+admin.site.register(Contact)
 admin.site.register(Answer)
 admin.site.register(Worksheet, WorksheetAdmin)
 admin.site.register(Step, StepAdmin)

@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+
+{% block script %}
+	$(document).ready(function(){
+    	$("#{{ contact.state }}").attr('selected', true);
+   	});
+
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block title %}
+  Edit Contact
+{% endblock %}
+
+{% block content %}
+
+	<h2>Edit Contact</h2>
+
+	<a href="/contacts/">Back to all contacts</a>
+	<form method='post' action='.'>
+		<textarea name='data' id='data' rows="10" style="width:500px">{{ contact.data }}</textarea>
+		<br />
+		<select name='state' id='state'>
+			<option id="Uncontacted">Uncontacted</option>
+			<option id="Active">Active</option>
+			<option id="Friendly">Friendly</option>
+			<option id="Dead">Dead</option>
+		</select>
+		<br />
+		<input type="submit" value="Save" />
+
+	</form>
+{% endblock %}
