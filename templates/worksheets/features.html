@@ -46,9 +46,7 @@
 				{% for q in r %}
 						<td><textarea id="id_{{ q.pk }}" name="{{ q.pk }}">{{ q.answer }}</textarea></td>
 				{% endfor %}
-				{% if forloop.counter > 3 %}
 				<td><a href="" onClick="removeRow('tr_{{ forloop.counter }}')" class="small">Remove row</a></td>
-				{% endif %}
 			{% endfor %}
 		</table>
 
