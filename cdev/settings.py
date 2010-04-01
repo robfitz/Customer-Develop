@@ -4,14 +4,14 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Rob Fitzpatrick', 'rob@robfitz.org'),
+    ('Rob Fitzpatrick', 'robftz@gmail.com'),
 )
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'django.db.backends.sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'cdev_db'             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
+DATABASE_ENGINE = 'postgresql_psycopg2'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_NAME = 'robfitz_cdev'             # Or path to database file if using sqlite3.
+DATABASE_USER = 'robfitz_cdev'             # Not used with sqlite3.
+DATABASE_PASSWORD = 'DB_party_thyme'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -69,6 +69,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     "C:/www/customerdev/templates",
+    "/home/webapps/django/Customer-Develop/templates/",
 )
 
 INSTALLED_APPS = (
