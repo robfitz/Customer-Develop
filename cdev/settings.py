@@ -14,6 +14,7 @@ DATABASE_USER = 'robfitz_cdev'             # Not used with sqlite3.
 DATABASE_PASSWORD = 'DB_party_thyme'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+TEST_DATABASE_NAME = 'robfitz_cdev_test'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
