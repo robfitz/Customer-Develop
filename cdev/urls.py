@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     (r'^$', 'mycd.views.index'),
+    (r'^scrap/', 'mycd.views.scrap'),
     (r'^export/', 'mycd.views.export'),
     (r'^import/', 'mycd.views.importCsv'),
     (r'^login/', 'mycd.views.login'),
