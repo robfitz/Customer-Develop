@@ -79,8 +79,6 @@ class Contact(models.Model):
 			# job @ company
 			if re.match(r".+? @ .+", line):
 				tokens = line.split(' @ ')
-				print line
-				print tokens
 				self.job_title = tokens[0].strip()
 				self.company = tokens[1].strip()
 			elif re.match(r"@ .+", line):
@@ -89,7 +87,6 @@ class Contact(models.Model):
 			
 			#email
 			elif re.match(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b", line):
-				print 'found an email!'
 				self.email = line
 			
 			# twitter

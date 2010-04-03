@@ -57,7 +57,7 @@ def importCsv(request):
 																   worksheet=worksheet)
 				if created: question.save()
 			
-		return HttpResponseRedirect("/dashboard")
+		return HttpResponseRedirect("/dashboard/")
 	else:
 		return render_to_response('util/importCsv.html')
 
