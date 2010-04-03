@@ -65,16 +65,9 @@
 
 {% endblock %}
 
-{% block title %}
-  {% if worksheet %}
-    {{ worksheet }}
-  {% else %}
-    Customer Development Worksheet
-  {% endif %}
-{% endblock %}
-
-{% block content %}
-
+{% block header %}
+  {{ block.super }}
+  <br/><br/>
   {% block nav %}
 	  {% if prevWorksheet %}
 		<a href="/worksheet/{{ prevWorksheet.pk }}">Previous Worksheet</a> |&nbsp;
@@ -88,6 +81,17 @@
 	  {% endif %}
   {% endblock %}
 
+{% endblock %}
+
+{% block title %}
+  {% if worksheet %}
+    {{ worksheet }}
+  {% else %}
+    Customer Development Worksheet
+  {% endif %}
+{% endblock %}
+
+{% block content %}
 
   {% if worksheet %}
     <h2>{{ worksheet }}</h2>

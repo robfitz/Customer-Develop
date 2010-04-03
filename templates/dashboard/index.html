@@ -2,8 +2,39 @@
 
 {% block title %}Your Customer Development Dashboard{% endblock %}
 
+{% block style %}
+	div#left, div#center, div#right {
+		float:left;
+		padding:8px;
+		margin: 0px;
+		width: 416px;
+	}
+	div#center, div#right {
+		width: 332px;
+	}
+	/*
+	div#left {
+		padding-right: 7px;
+		border-right: 1px solid #ccc;
+	}
+	div#center {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 7px;
+	}
+	*/
+
+	/*** debug colors */
+	/*
+	div#left { background-color:#f00; }
+	div#center { background-color:#0f0; }
+	div#right { background-color:#00f; }
+	*/
+{% endblock %}
+
 {% block content %}
 	{% if request.user %}
+
+		<div id="left">
 		<h2>Worksheets</h2>
 
 		{% for s in substeps %}
@@ -16,8 +47,9 @@
 			{% empty %}
 			No substeps :(
 		{% endfor %}
+		</div>
 
-
+		<div id="center">
 		<h2>Contacts</h2>
 		<p>
 		<a href="/contacts/">View all contacts</a>
@@ -25,12 +57,12 @@
 		<p>
 		<a href="/contacts/00/">Create new contact</a>
 		</p>
+		</div>
 
-		<h2>Pivots</h2>
-		Coming soon!
-
+		<div id="right">
 		<h2>Community</h2>
 		Coming soon!
+		</div>
 
 	{% else %}
 	  <h2>Log in to see the sweet, sweet candy</h2>

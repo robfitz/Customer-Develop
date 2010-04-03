@@ -5,11 +5,51 @@
       {% block title %}{% endblock %}
     </title>
     <style>
-    	body { font-family: "Arial"; }
+    	body {
+    		font-family: "Arial";
+			text-align: center;
+			padding:0px;
+		}
     	textarea { font-family:"Arial"; }
+   		h2 { margin-top:0px; }
     	.invisible { display:none; }
 		.small { font-size:11px; }
+
+		div#body {
+			text-align:left;
+			padding: 0px;
+			margin:0px;
+			float:left;
+			width:780px;
+			/*
+			border-left: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+			*/
+		}
+		#header, #content, #footer {
+			float:left;
+			margin:0px;
+		}
+		#content { padding: 0px; width:780px; }
+		#header, #footer { padding:8px; width:764px; }
+		#footer { margin-bottom:0px; }
+
+    	div#header { background-color:#fff; border-bottom: 1px solid #ccc}
+		div#body { background-color:#fff; }
+		div#content { background-color:#fff; }
+    	div#footer { background-color:#fff; border-top:1px solid #ccc}
+
+		/*** debug colors */
+		/*
+		#header, #content { margin-bottom:8px; }
+		div#body { background-color:#555; }
+    	div#header { background-color:#ccc; }
+    	div#content { background-color:#999; }
+    	div#footer { background-color:#ccc; }
+		*/
+
     	{% block style %}{% endblock %}
+
     </style>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
@@ -18,30 +58,36 @@
     </script>
 </head>
 <body>
-
+	<div id="body">
+	<div id="header">
 	{% block header %}
       {% if breadcrumbs %}
         {% for crumb in breadcrumbs %}
           {% if crumb.url %}<a href="{% endif %}{{ crumb.url }}{% if crumb.url %}">{% endif %}{{ crumb.name }}{% if crumb.url %}</a>{% endif %}
           {% if not forloop.last %} &gt; {% endif %}
         {% endfor %}
-      |&nbsp;
       {% endif %}
+      <div style="float:right">
       {% if request.user.is_authenticated %}
         <a href="/logout">Log out</a>
       {% else %}
         <a href="/login">Sign in</a> or <a href="/register">create account</a>
       {% endif %}
-      <hr>
+      </div>
 	{% endblock %}
+	</div>
 
+	<div id="content">
     {% block content %}
     {% endblock %}
+    </div>
 
+	<div id="footer">
     {% block footer %}
-      <hr>
       <a href="">About</a> | <a href="">Privacy</a> | <a href="">Help</a>
     {% endblock %}
+    </div>
 
+	</div>
 </body>
 </html>

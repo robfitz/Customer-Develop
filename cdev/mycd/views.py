@@ -13,6 +13,9 @@ from django.utils.encoding import smart_str, smart_unicode
 def index(request):
     return render_to_response('static/index.html', locals())
 
+def scrap(request):
+	return render_to_response('static/scrap.html')
+
 def contactList(request):
 	if not request.user.is_authenticated():
 		return HttpResponseRedirect("/dashboard")
@@ -99,8 +102,6 @@ def register(request):
                 user = auth.authenticate(username=request.POST['username'],
                                          password=request.POST['password1'])
                 auth.login(request, user)
-
-                assignBaseModelsTo(user)
                 
                 return HttpResponseRedirect("/dashboard")
             else:
