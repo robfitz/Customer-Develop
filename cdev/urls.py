@@ -20,5 +20,5 @@ urlpatterns = patterns('',
     (r'^contacts/', 'mycd.views.contactList'),
     (r'^worksheet/(?P<worksheet_id>\d+)/$', 'mycd.views.worksheet'),
     (r'^admin/', include(admin.site.urls)),
-    (r'^assets/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'C:/www/customerdev/assets'}),
+    (r'^assets/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'C:/www/Customer-Develop/assets'}),
 )
