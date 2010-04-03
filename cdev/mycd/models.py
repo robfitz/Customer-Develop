@@ -107,6 +107,14 @@ class Contact(models.Model):
 		
 		return self
 
+class ContactTag(models.Model):
+	name = models.CharField(max_length=50)
+	tag_parent = models.ForeignKey("self", null=True, blank=True)
+	contact = models.ForeignKey(Contact, null=True, blank=True)
+	
+	def __unicode__(self):
+		return self.name
+	
 class Step(models.Model):
 	name = models.CharField(max_length=100)
 	order = models.DecimalField(decimal_places=2, max_digits=4, default=1)
