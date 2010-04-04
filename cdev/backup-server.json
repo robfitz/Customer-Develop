@@ -9,7 +9,7 @@
             "company": "http://oneforty.com", 
             "linked_in": "", 
             "state": "Uncontacted", 
-            "owner": 14, 
+            "owner": 1, 
             "hacker_news": "HN sachinag\r", 
             "email": "", 
             "job_title": "Operations Lead"
@@ -25,7 +25,7 @@
             "company": "http://woobius.com", 
             "linked_in": "", 
             "state": "Uncontacted", 
-            "owner": 14, 
+            "owner": 1, 
             "hacker_news": "HN swombat\r", 
             "email": "", 
             "job_title": "Founder"
@@ -41,7 +41,7 @@
             "company": "", 
             "linked_in": "", 
             "state": "Uncontacted", 
-            "owner": 14, 
+            "owner": 1, 
             "hacker_news": "", 
             "email": "shimoda@gmail.com\r", 
             "job_title": ""
@@ -57,7 +57,7 @@
             "company": "", 
             "linked_in": "", 
             "state": "Uncontacted", 
-            "owner": 14, 
+            "owner": 1, 
             "hacker_news": "", 
             "email": "", 
             "job_title": ""
@@ -73,7 +73,7 @@
             "company": "", 
             "linked_in": "", 
             "state": "Uncontacted", 
-            "owner": 14, 
+            "owner": 1, 
             "hacker_news": "", 
             "email": "byosko@gmail.com", 
             "job_title": ""
@@ -1317,7 +1317,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 1, 
             "answer": "yes!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1329,7 +1329,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 2, 
             "answer": "there is!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1341,7 +1341,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 9, 
             "answer": "re-segmented!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1353,7 +1353,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 10, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1365,7 +1365,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 11, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1377,7 +1377,7 @@
             "timestamp": "2010-03-20 21:42:53", 
             "question": 12, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1389,7 +1389,7 @@
             "timestamp": "2010-03-20 21:43:23", 
             "question": 9, 
             "answer": "re-segmented by niche (lean startups)", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1401,7 +1401,7 @@
             "timestamp": "2010-03-20 21:43:23", 
             "question": 10, 
             "answer": "20k!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1413,7 +1413,7 @@
             "timestamp": "2010-03-20 21:43:23", 
             "question": 11, 
             "answer": "yes, but it's personal money", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1425,7 +1425,7 @@
             "timestamp": "2010-03-20 21:43:23", 
             "question": 12, 
             "answer": "as long as is needed", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1437,7 +1437,7 @@
             "timestamp": "2010-03-20 22:25:49", 
             "question": 3, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1449,7 +1449,7 @@
             "timestamp": "2010-03-20 22:25:50", 
             "question": 4, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1461,7 +1461,7 @@
             "timestamp": "2010-03-20 22:25:50", 
             "question": 5, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1473,7 +1473,7 @@
             "timestamp": "2010-03-20 22:25:50", 
             "question": 6, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1485,7 +1485,7 @@
             "timestamp": "2010-03-20 22:46:08", 
             "question": 1, 
             "answer": "that sounds smart!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1497,7 +1497,7 @@
             "timestamp": "2010-03-20 22:55:12", 
             "question": 1, 
             "answer": "N/A while a one-man show. will educate new team recruits before they sign", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1509,7 +1509,7 @@
             "timestamp": "2010-03-20 22:55:12", 
             "question": 2, 
             "answer": "there is (again, for just my current army of one)", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1521,7 +1521,7 @@
             "timestamp": "2010-03-20 22:55:12", 
             "question": 9, 
             "answer": "re-segmented by niche (CRM & salesflow for lean startups)", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1533,7 +1533,7 @@
             "timestamp": "2010-03-20 22:55:13", 
             "question": 10, 
             "answer": "i need $30k, though only $10k in cash (rest is personal living expense)\r\n\r\n2 months / pass * 3 passes = 6 months\r\n\r\n1x founder @ 40k = 20k\r\n2x interns @ 20k = 10k\r\n\r\n", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1545,7 +1545,7 @@
             "timestamp": "2010-03-20 22:56:47", 
             "question": 3, 
             "answer": "rob", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1557,7 +1557,7 @@
             "timestamp": "2010-03-20 22:56:47", 
             "question": 4, 
             "answer": "rob - customer dev\r\n\r\nwill only need a sales closer if investors are key customer type (as opposed to self-serve startups)", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1569,7 +1569,7 @@
             "timestamp": "2010-03-20 22:56:48", 
             "question": 5, 
             "answer": "rob", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1581,7 +1581,7 @@
             "timestamp": "2010-03-20 22:56:48", 
             "question": 6, 
             "answer": "rob short term\r\n\r\nhoping to build the foundation then outsource content creation (worksheets, etc)\r\n\r\nwill hire more help when pain is felt", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1593,7 +1593,7 @@
             "timestamp": "2010-03-20 22:59:45", 
             "question": 7, 
             "answer": "my mission is to structure the customer development process, thereby making it easier to follow and helping companies to succeed.\r\n\r\nthe product is a customer development dashboard. the primary interaction is filling out worksheets. there is also an earlyvangelist CRM and a community element for connecting lean entrepreneurs", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1605,7 +1605,7 @@
             "timestamp": "2010-03-20 22:59:45", 
             "question": 8, 
             "answer": "We believe in encouraging more people to start companies and in helping to make those companies more successful", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1617,7 +1617,7 @@
             "timestamp": "2010-03-21 12:31:33", 
             "question": 3, 
             "answer": "robrobrob!", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1629,7 +1629,7 @@
             "timestamp": "2010-03-21 15:04:13", 
             "question": 37, 
             "answer": "wheels;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1641,7 +1641,7 @@
             "timestamp": "2010-03-21 15:04:13", 
             "question": 38, 
             "answer": "rollin';;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1653,7 +1653,7 @@
             "timestamp": "2010-03-21 15:04:20", 
             "question": 37, 
             "answer": "wheels;pegs;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1665,7 +1665,7 @@
             "timestamp": "2010-03-21 15:04:20", 
             "question": 38, 
             "answer": "rollin';;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1677,7 +1677,7 @@
             "timestamp": "2010-03-21 15:04:30", 
             "question": 37, 
             "answer": "wheels;pegs;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1689,7 +1689,7 @@
             "timestamp": "2010-03-21 15:04:30", 
             "question": 38, 
             "answer": "rollin';;steerin'", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1701,7 +1701,7 @@
             "timestamp": "2010-03-21 15:53:03", 
             "question": 37, 
             "answer": "wheels;pegs;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1713,7 +1713,7 @@
             "timestamp": "2010-03-21 15:53:04", 
             "question": 38, 
             "answer": "rollin';;steerin'", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1725,7 +1725,7 @@
             "timestamp": "2010-03-21 15:53:39", 
             "question": 37, 
             "answer": "wheels;pegs;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1737,7 +1737,7 @@
             "timestamp": "2010-03-21 15:53:40", 
             "question": 38, 
             "answer": "rollin';;steerin';", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1749,7 +1749,7 @@
             "timestamp": "2010-03-21 16:07:37", 
             "question": 37, 
             "answer": "wheels;pegs;;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1761,7 +1761,7 @@
             "timestamp": "2010-03-21 16:07:37", 
             "question": 38, 
             "answer": "rollin';;steerin';;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1773,7 +1773,7 @@
             "timestamp": "2010-03-21 17:06:58", 
             "question": 37, 
             "answer": "wheels;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1785,7 +1785,7 @@
             "timestamp": "2010-03-21 17:06:59", 
             "question": 38, 
             "answer": "rollin';steerin'", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1797,7 +1797,7 @@
             "timestamp": "2010-03-21 17:08:05", 
             "question": 37, 
             "answer": "wheels;;;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1809,7 +1809,7 @@
             "timestamp": "2010-03-21 17:08:05", 
             "question": 38, 
             "answer": "rollin';steerin';;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1821,7 +1821,7 @@
             "timestamp": "2010-03-21 17:17:33", 
             "question": 37, 
             "answer": "wheels;;", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1833,7 +1833,7 @@
             "timestamp": "2010-03-21 17:17:33", 
             "question": 38, 
             "answer": "rollin';steerin';", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1845,7 +1845,7 @@
             "timestamp": "2010-03-21 17:18:19", 
             "question": 37, 
             "answer": "wheels;handlebars;pegs", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1857,7 +1857,7 @@
             "timestamp": "2010-03-21 17:18:19", 
             "question": 38, 
             "answer": "rollin';steerin';freeridin'", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1869,7 +1869,7 @@
             "timestamp": "2010-03-31 22:06:02", 
             "question": 37, 
             "answer": "wheels;pegs", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1881,7 +1881,7 @@
             "timestamp": "2010-03-31 22:06:03", 
             "question": 38, 
             "answer": "rollin';freeridin'", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": false
         }
     }, 
@@ -1893,7 +1893,7 @@
             "timestamp": "2010-03-31 22:06:09", 
             "question": 37, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }, 
@@ -1905,7 +1905,7 @@
             "timestamp": "2010-03-31 22:06:10", 
             "question": 38, 
             "answer": "", 
-            "owner": 14, 
+            "owner": 1, 
             "is_latest": true
         }
     }
