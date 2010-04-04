@@ -46,7 +46,11 @@ td {
 
 			</td>
 			<td>{{ contact.state }}</td>
-			<td>Coming soon!</td>
+			<td>
+			{% for tag in contact.active_tags %}
+			<a class="tag">{{ tag }}</a>
+			{% endfor %}
+			</td>
 		</tr>
 		{% endfor %}
 	</table>

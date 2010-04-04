@@ -52,18 +52,32 @@ def editContact(request, contact_id):
 			contact = contact.fromText(data)
 		if request.POST['state']:
 			contact.state = request.POST['state']
+		
+		tags = ContactTag.objects.filter(contact=contact)
+		for t in tags:
+			t.is_active = False
+			t.save()
 			
+		for key in request.POST.keys():
+			if key.startswith('tag_'):
+				id = key[4:]
+				print 'id:' + id
+				active_tag = ContactTag.objects.get(id=id)
+				print '*** making active tag: ' + unicode(active_tag.id)
+				active_tag.is_active = True
+				active_tag.save()
+		
 		contact.save()
 		
 		return HttpResponseRedirect("/contacts/")
-	
-	
+		
 	contact.data = contact.toText()
+	contact.tags = contact.tagData()
+	
 	return render_to_response('crm/edit.html', locals())
 
 def login(request):
 
-	
 	if request.user.is_authenticated():
 		return HttpResponseRedirect("/dashboard/")
 	elif 'username' in request.POST and 'password' in request.POST:
