@@ -1,5 +1,103 @@
 {% extends 'layout/base.html' %}
 
+{% block style %}
+
+	h2 {
+		font-size:24px;
+		font-weight: bold;
+		margin-bottom:0px;
+		margin-top:8px;
+	}
+
+	h3 {
+		margin-top:0px;
+		margin-bottom:8px;
+		font-size:16px;
+		font-weight: bold;
+	}
+
+	h4 {
+		font-size:14px;
+		font-weight:bold;
+		margin-top:0px;
+		margin-bottom:8px;
+	}
+
+	div#left {
+		float:left;
+		padding:8px;
+		margin: 0px;
+		width: 394px;
+	}
+	div#right, div#email {
+		float:left;
+		padding:8px;
+		margin: 0px;
+		width: 342px;
+	}
+
+	/*** debug colors */
+	/*
+	div#email {	background-color:#ff0; }
+	div#left { background-color:#f00; }
+	div#center { background-color:#0f0; }
+	div#right { background-color:#00f; }
+	*/
+
+	ul {
+		padding-left:2px;
+		padding-top:0px;
+		margin-top:0px;
+		margin-bottom:-4px;
+		list-style-type:none;
+	}
+	li {
+		margin-bottom:8px;
+		background-image:url('/assets/bullet.png');
+		background-repeat:no-repeat;
+		background-position:0px;
+		padding-left:24px;
+		border: 0px solid #ccc;
+	}
+
+	p {
+		text-align:justify;
+	}
+
+	div#email textarea {
+		width:250px;
+		height:36px;
+		float:left;
+		font-size:24px;
+	}
+	div#email input {
+		height:42px;
+		float:left;
+		font-size:18px;
+	}
+	div#email {
+		border: 1px solid #ccc;
+		margin:8px;
+		background-color:#dfd;
+		width:736px;
+	}
+
+	p.quote {
+		font-size:12px;
+		border:1px solid #ccc;
+		padding:8px;
+		padding-bottom:20px;
+		min-height:38px;
+	}
+	p.quote img {
+		height:50px;
+		width:50px;
+		float:left;
+		margin-right:8px;
+	}
+
+{% endblock %}
+
 {% block header %}
 
 {{ block.super }}
@@ -7,18 +105,98 @@
 <a href="/dashboard">Dashboard</a>
 {% endif %}
 
-
 {% endblock %}
 
 {% block title %}Customer Development Dashboard{% endblock %}
 
 {% block content %}
-<h2>Customer Development Dashboard</h2>
-This is a customer development dashboard where you can
 
+<div id="left">
+	<h2>This is a customer development dashboard.</h2>
+</div>
+
+<!--
+<div id="email">
+<h4>Add your email for updates & early access.</h4>
+<textarea></textarea><input type="submit" value="Let me in!" />
+</div>
+<div id="wide"></div>
+-->
+
+<div id="left">
+	<h3>It helps create businesses people love.</h3>
+	<ul>
+	  <li>Structured customer development with worksheets
+	  <li>Organize customer feedback with an actionable CRM
+	  <li>Track your pivots & lessons learned with versioning
+	  <li>Save time with instant reports
+	</ul>
+</div>
+
+<div id="right">
+
+<h3>Why customer development?</h3>
 <ul>
-  <li>Step through customer development with worksheets
-  <li>Record customer feedback with a lean CRM
-  <li>Learn from a community of peers
+	<li>Find & sell to your first paying customers
+	<li>Recognize & escape from faulty ideas
+	<li>Reduce sales & marketing costs
+	<li>Know when & how to pivot
 </ul>
+</div>
+
+<div id="email">
+<div style="float:left;margin-right:16px;">
+<h4>Want updates and early access? Enter your email.</h4>
+<textarea></textarea><input type="submit" value="Let me in!" />
+</div>
+<div style="float:right;width:300px;padding-right:8px;">
+<p class="medium" style="margin-top:0px;">
+Can't wait another minute?
+Get your fix from our <a href="/blog">blog</a> and <a href="http://twitter.com/robfitz">Twitter</a>.
+</p>
+<p class="medium" style="margin-bottom:0px;">
+And if you can spare a moment to help us make a better product, <a href="">I'd love to hear your thoughts</a>.
+</p>
+</div>
+</div>
+
+<div id="left" style="padding-top:0px">
+	<p class="quote">
+	<a href=""><img src="/assets/pg.gif" /></a>
+	&quot;In nearly every failed startup, the real problem was that customers didn't want the product.&quot;
+	<br />
+	<a href="http://www.paulgraham.com/start.html" style="float:right;">Paul Graham</a>
+	</p>
+
+	<p class="quote">
+	<a href=""><img src="/assets/dg.png" /></a>
+	&quot;There is really nothing else to reliably always give you instant clarity like customers can at any point during your company's lifetime.&quot;
+	<br />
+	<a href="http://venturefizz.com/blog/it-broken-does-it-need-be-fixed-ask-your-customer" style="float:right;">Dayna Grayson</a>
+	</p>
+
+	<p class="quote">
+	<a href=""><img src="/assets/4steps.jpg" /></a>
+	&quot;Your goal is to determine who your true customers are and how they will purchase your product.&quot;
+	<br />
+	<a href="http://www.amazon.com/Four-Steps-Epiphany-Steven-Blank/dp/0976470705/" style="float:right;">Steve Blank</a>
+	</p>
+
+</div>
+
+<div id="right">
+<h4>Keen to read more on customer development?</h4>
+<p class="medium">
+<a href="">4 Steps to the Epiphany</a> is the must-read text and <a href="">Steve's blog</a> also has a <a href="">good overview</a>.
+</p>
+<p class="medium">
+<a href="">Eric Ries</a> coined the term "lean startup" which borrows heavily from customer development and he has some <a href="">great posts</a> on the topic.
+</p>
+<p class="medium">
+<a href="">Ash Maurya</a> has written a wonderful <a href="">case study for web startups</a> and Yury from Recess Mobile has written <a href="http://www.recessmobile.com/blog/my-take-on-customer-development-and-the-lean-startup/">another excellent one</a>, which is also conveniently full of links to other solid articles & evangelists.
+</p>
+<p class="medium">
+You're also more than welcome to join the discussion on the <a href="">lean startup circle</a> mailing list.
+</p>
+</div>
 {% endblock %}
