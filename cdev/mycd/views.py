@@ -11,6 +11,12 @@ from mycd.util import *
 from django.utils.encoding import smart_str, smart_unicode
 
 def index(request):
+	if request.method == 'POST' and len(request.POST.keys()) > 0:
+		if request.POST["email"]:
+			sub = NewsSubscriber(email=request.POST["email"])
+			sub.save()
+			return HttpResponseRedirect('http://customerdevelop.wufoo.com/forms/here-are-8-questions-i-need-your-help/')
+
 	return render_to_response('static/index.html', locals())
 
 def scrap(request):

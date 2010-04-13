@@ -4,13 +4,18 @@ from datetime import *
 from django.contrib.auth.models import User
 import re
 
-
 RELATION_STATE_CHOICES = (
 	(u'Uncontacted', u'Uncontacted'),
 	(u'Active', u'Active'),
 	(u'Friendly', u'Friendly'),
 	(u'Dead', u'Dead'),
 )
+
+class NewsSubscriber(models.Model):
+	email = models.CharField(max_length=100)
+	
+	def __unicode__(self):
+		return self.email
 
 class Contact(models.Model):
 	owner = models.ForeignKey(User)

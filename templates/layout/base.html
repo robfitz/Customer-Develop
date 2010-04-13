@@ -75,7 +75,8 @@
 </head>
 <body>
 	<div id="body">
-	<div id="header">
+	{% block headerdiv %}
+	<div id="header" class="medium">
 	{% block header %}
       {% if breadcrumbs %}
         {% for crumb in breadcrumbs %}
@@ -92,15 +93,16 @@
       </div>
 	{% endblock %}
 	</div>
+	{% endblock %}
 
 	<div id="content">
     {% block content %}
     {% endblock %}
     </div>
 
-	<div id="footer">
+	<div id="footer" class="small">
     {% block footer %}
-      <a href="">About</a> | <a href="">Privacy</a> | <a href="">Help</a>
+      	About | Privacy | <a href="">Help</a>
     {% endblock %}
     </div>
 

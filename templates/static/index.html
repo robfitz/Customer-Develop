@@ -2,11 +2,11 @@
 
 {% block style %}
 
-	h2 {
+	h1 {
 		font-size:24px;
 		font-weight: bold;
 		margin-bottom:0px;
-		margin-top:8px;
+		margin-top:0px;
 	}
 
 	h3 {
@@ -29,11 +29,42 @@
 		margin: 0px;
 		width: 394px;
 	}
-	div#right, div#email {
+	div#right {
 		float:left;
 		padding:8px;
 		margin: 0px;
-		width: 342px;
+		width: 354px;
+	}
+	div#email {
+		border: 1px solid #ccc;
+		float:left;
+		padding:8px;
+		margin:8px;
+		background-color:#dfd;
+		width:746px;
+	}
+	div#emailinput {
+		width:386px;
+		float:left;
+	}
+	div#emailinputdescription {
+		width:344px;
+		float:right;
+		margin-left:8px;
+	}
+	div#email textarea {
+		width:278px;
+		height:36px;
+		float:left;
+		font-size:24px;
+	}
+
+	div#email input {
+		cursor:pointer;
+		height:42px;
+		width:100px;
+		float:left;
+		font-size:18px;
 	}
 
 	/*** debug colors */
@@ -64,24 +95,6 @@
 		text-align:justify;
 	}
 
-	div#email textarea {
-		width:250px;
-		height:36px;
-		float:left;
-		font-size:24px;
-	}
-	div#email input {
-		height:42px;
-		float:left;
-		font-size:18px;
-	}
-	div#email {
-		border: 1px solid #ccc;
-		margin:8px;
-		background-color:#dfd;
-		width:736px;
-	}
-
 	p.quote {
 		font-size:12px;
 		border:1px solid #ccc;
@@ -98,22 +111,28 @@
 
 {% endblock %}
 
-{% block header %}
-
-{{ block.super }}
-{% if request.user.is_authenticated %}
-<a href="/dashboard">Dashboard</a>
-{% endif %}
-
+{% block headerdiv %}
 {% endblock %}
+
 
 {% block title %}Customer Development Dashboard{% endblock %}
 
 {% block content %}
 
 <div id="left">
-	<h2>This is a customer development dashboard.</h2>
+	<h1>This is a customer development dashboard.</h1>
 </div>
+
+<div style="float:right;padding-top:8px" class="medium">
+  {% if request.user.is_authenticated %}
+	<a href="/dashboard">Your dashboard</a> |
+	<a href="/logout">Log out</a>
+  {% else %}
+	<a href="/login">Sign in</a> or <a href="/register">create account</a>
+  {% endif %}
+</div>
+
+
 
 <!--
 <div id="email">
@@ -126,10 +145,10 @@
 <div id="left">
 	<h3>It helps create businesses people love.</h3>
 	<ul>
-	  <li>Structured customer development with worksheets
-	  <li>Organize customer feedback with an actionable CRM
-	  <li>Track your pivots & lessons learned with versioning
-	  <li>Save time with instant reports
+	  <li>Discover an effective, repeatable sales process
+	  <li>Document your beliefs with versioned worksheets
+	  <li>Collect customer feedback in an actionable CRM
+	  <li>Track & review your lessons learned
 	</ul>
 </div>
 
@@ -145,34 +164,30 @@
 </div>
 
 <div id="email">
-<div style="float:left;margin-right:16px;">
-<h4>Want updates and early access? Enter your email.</h4>
-<textarea></textarea><input type="submit" value="Let me in!" />
+<div id="emailinput">
+<h3>Enter your email for updates and early access.</h3>
+<form action='.' method='POST'>
+<textarea name="email" value="email"></textarea><input class="green" type="submit" value="Let me in!" />
+</form>
 </div>
-<div style="float:right;width:300px;padding-right:8px;">
+<div id="emailinputdescription">
 <p class="medium" style="margin-top:0px;">
-Can't wait another minute?
-Get your fix from our <a href="/blog">blog</a> and <a href="http://twitter.com/robfitz">Twitter</a>.
+We haven't launched yet. Can't wait another minute?
+Get your fix from our <a href="/blog">blog</a>.
 </p>
 <p class="medium" style="margin-bottom:0px;">
-And if you can spare a moment to help us make a better product, <a href="">I'd love to hear your thoughts</a>.
+And if you can spare a moment to help us make a better product, <a href="http://customerdevelop.wufoo.com/forms/here-are-8-questions-i-need-your-help/">I'd love to hear your thoughts</a>.
 </p>
 </div>
 </div>
 
 <div id="left" style="padding-top:0px">
+
 	<p class="quote">
 	<a href=""><img src="/assets/pg.gif" /></a>
 	&quot;In nearly every failed startup, the real problem was that customers didn't want the product.&quot;
 	<br />
 	<a href="http://www.paulgraham.com/start.html" style="float:right;">Paul Graham</a>
-	</p>
-
-	<p class="quote">
-	<a href=""><img src="/assets/dg.png" /></a>
-	&quot;There is really nothing else to reliably always give you instant clarity like customers can at any point during your company's lifetime.&quot;
-	<br />
-	<a href="http://venturefizz.com/blog/it-broken-does-it-need-be-fixed-ask-your-customer" style="float:right;">Dayna Grayson</a>
 	</p>
 
 	<p class="quote">
@@ -182,21 +197,28 @@ And if you can spare a moment to help us make a better product, <a href="">I'd l
 	<a href="http://www.amazon.com/Four-Steps-Epiphany-Steven-Blank/dp/0976470705/" style="float:right;">Steve Blank</a>
 	</p>
 
+	<p class="quote">
+	<a href=""><img src="/assets/dg.png" /></a>
+	&quot;There is really nothing else to reliably always give you instant clarity like customers can at any point during your company's lifetime.&quot;
+	<br />
+	<a href="http://venturefizz.com/blog/it-broken-does-it-need-be-fixed-ask-your-customer" style="float:right;">Dayna Grayson</a>
+	</p>
+
 </div>
 
 <div id="right">
-<h4>Keen to read more on customer development?</h4>
+<h4 style="margin-top:2px">Want to learn more about customer development?</h4>
 <p class="medium">
 <a href="">4 Steps to the Epiphany</a> is the must-read text and <a href="">Steve's blog</a> also has a <a href="">good overview</a>.
 </p>
 <p class="medium">
-<a href="">Eric Ries</a> coined the term "lean startup" which borrows heavily from customer development and he has some <a href="">great posts</a> on the topic.
+<a href="http://www.startuplessonslearned.com">Eric Ries</a> coined the term <a href="http://www.startuplessonslearned.com/2008/09/lean-startup.html">lean startup</a> which borrows heavily from customer development and he has some <a href="">great posts</a> on the topic.
 </p>
 <p class="medium">
-<a href="">Ash Maurya</a> has written a wonderful <a href="">case study for web startups</a> and Yury from Recess Mobile has written <a href="http://www.recessmobile.com/blog/my-take-on-customer-development-and-the-lean-startup/">another excellent one</a>, which is also conveniently full of links to other solid articles & evangelists.
+<a href="">Ash Maurya</a> has written a wonderful <a href="">case study for web startups</a>. Yury from Recess Mobile has written <a href="http://www.recessmobile.com/blog/my-take-on-customer-development-and-the-lean-startup/">another excellent one</a>, which is also conveniently full of links to other solid articles & evangelists.
 </p>
 <p class="medium">
-You're also more than welcome to join the discussion on the <a href="">lean startup circle</a> mailing list.
+You can also join the <a href="">lean startup circle</a> mailing list.
 </p>
 </div>
 {% endblock %}
