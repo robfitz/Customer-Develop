@@ -106,6 +106,8 @@ def login(request):
 	return render_to_response('dashboard/login.html', locals())
 
 def register(request):
+	return HttpResponseRedirect("/")
+
 	if request.user.is_authenticated():
 		return HttpResponseRedirect("/dashboard/")
 	else:
