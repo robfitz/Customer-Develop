@@ -138,8 +138,11 @@ def dashboard(request):
 		return HttpResponseRedirect("/")
 	
 	breadcrumbs = [{'name':'Dashboard', 'url':'/dashboard'}]
-	worksheets = Worksheet.objects.filter()
-	 
+	worksheets = []
+	for ss in Substep.objects.all():
+		ss_worksheets = Worksheet.objects.filter(substep=ss)
+		worksheets.extend(ss_worksheets)
+
 	substeps = []
 	#grab all the substeps that the user has worksheets for
 	for w in worksheets:
