@@ -225,6 +225,7 @@ def worksheet(request, worksheet_id):
 	questions = []
 	#user has submitted the form. check for new data & save it
 	for q in Question.objects.filter(worksheet=worksheet):
+	
 		#if the user has submitted answers, handle them
 		if request.method == 'POST' and len(request.POST.keys()) > 0:
 			#if available, note down their old answer for versioning
@@ -254,6 +255,16 @@ def worksheet(request, worksheet_id):
 		else: form.answer = ""
 
 		questions.append(form);
+		
+		if q.contact_tag:
+			matchingTags = ContactTag.objects.filter(name=q.contact_tag.name).filter(category=q.contact_tag.category).filter(is_active=True)
+			tagContacts = []
+			for t in matchingTags:
+				if t.contact.owner == request.user:
+					tagContacts.append(t.contact)
+			num = len(tagContacts)
+			q.field_note = "You currently have <b>" + str(num) + " contacts</b> of this type. Enter additional names below to add more."
+
 
 	#if worksheet.custom_template:
 	#   return render_to_response(worksheet.custom_template, locals())

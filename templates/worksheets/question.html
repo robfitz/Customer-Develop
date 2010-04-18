@@ -5,6 +5,13 @@
 	<td id="form_{{ question.instance.pk }}" width="300">
 		{{ question.instance.prompt }}
 		<!--{{ question.as_p }}-->
+
+		{% if question.instance.field_note %}
+			<p class="small">
+			{{ question.instance.field_note|safe }}
+			</p>
+		{% endif %}
+
 		<textarea id="id_{{question.instance.pk}}-answer" name="{{question.instance.pk}}-answer" rows="{{question.instance.field_rows}}" style="width:300px" >{{question.answer}}</textarea>
 		{% if question.instance.details %}
 			{% ifnotequal question.instance.details.message '' %}
