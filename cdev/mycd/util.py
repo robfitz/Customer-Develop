@@ -99,15 +99,29 @@ def getAnswerVersions(answer):
 	return versions
 
 def addNewAnswer(question, owner, old_answer, new_answer_text):
-	answer = Answer(question=question,
-					answer=new_answer_text,
-					previous_version=old_answer,
-					timestamp=datetime.now(),
-					is_latest=True,
-					owner=owner)
-	answer.save()
+	if not question.contact_tag:
+		#regular answer, create, version, save & return it
+		answer = Answer(question=question,
+						answer=new_answer_text,
+						previous_version=old_answer,
+						timestamp=datetime.now(),
+						is_latest=True,
+						owner=owner)
+		answer.save()
 
-	if old_answer:
-		old_answer.is_latest = False
-		old_answer.save()
-	return answer
+		if old_answer:
+			old_answer.is_latest = False
+			old_answer.save()
+		return answer
+	else:
+		#special CRM answer. break it up & add contacts
+		lines = new_answer_text.split('\n')
+		for l in lines:
+			contact = Contact(name=l, owner=owner)
+			contact.save()
+			tag = ContactTag(name=question.contact_tag.name, 
+							category=question.contact_tag.category, 
+							contact=contact,
+							is_active=True)
+			tag.save()
+		return Answer(question=question)

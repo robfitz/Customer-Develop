@@ -249,7 +249,6 @@ def worksheet(request, worksheet_id):
 			except Answer.DoesNotExist:
 				form.answer = None
 
-			
 		if form.answer:
 			form.answer.versions = getAnswerVersions(form.answer)
 		else: form.answer = ""

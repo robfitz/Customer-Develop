@@ -4,7 +4,7 @@ from django.contrib import admin
 class QuestionInline(admin.TabularInline):
     model = Question
     extra = 5
-    fields = ['order', 'prompt', 'field_rows']
+    fields = ['order', 'prompt', 'field_rows', 'contact_tag']
 
 class SubstepInline(admin.TabularInline):
     model = Substep
@@ -45,13 +45,14 @@ class SubstepCategoryAdmin(admin.ModelAdmin):
     list_editable = ('order',)
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ('prompt', 'field_rows')
-    list_editable = ('field_rows',)
-    list_display_links = ('prompt',)
-    search_fields = ('prompt',)
+    list_display = ('prompt', 'field_rows', 'contact_tag')
+    list_editable = ('field_rows', 'contact_tag')
+    #list_display_links = ('prompt',)
+    search_fields = ('prompt','contact_tag')
     #list_filter = ('is_latest', 'is_base_model')
     #date_hierarchy = 'timestamp'
-    fields = ('worksheet', 'prompt', 'details', 'field_rows')
+    exclude = ('order',)
+    #fields = ('worksheet', 'prompt', 'details', 'field_rows')
     #filter_horizontal = ('many_to_many_field',)
     #raw_id_fields = ('extraInfo',)
 

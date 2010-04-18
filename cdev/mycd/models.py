@@ -205,6 +205,13 @@ class Question(models.Model):
 	worksheet = models.ForeignKey(Worksheet)
 	details = models.CharField(max_length=1000, null=True, blank=True)
 	
+	#if a contact_tag is set, this field will be a shortcut way to add
+	#new CRM entries marked by this tag. this means that no answer will
+	#be created and versioning won't function.
+	#the field will always be empty initially, but will feature extra info
+	#along the lines of "you have # contacts of this type already. add more?"
+	contact_tag = models.ForeignKey(ContactTag, null=True, blank=True)
+	
 	def __unicode__(self):
 		if self.prompt: return self.prompt
 		else: return "blank question"
