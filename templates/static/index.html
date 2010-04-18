@@ -52,14 +52,14 @@
 		float:right;
 		margin-left:8px;
 	}
-	div#email textarea {
+	div#email #email {
 		width:278px;
 		height:36px;
 		float:left;
 		font-size:24px;
 	}
 
-	div#email input {
+	div#email #button {
 		cursor:pointer;
 		height:42px;
 		width:100px;
@@ -167,7 +167,8 @@
 <div id="emailinput">
 <h3>Enter your email for updates and early access.</h3>
 <form action='.' method='POST'>
-<textarea name="email" value="email"></textarea><input class="green" type="submit" value="Let me in!" />
+<input id="email" type="text" name="email" value="email" />
+<input id="button" type="submit" value="Let me in!" />
 </form>
 </div>
 <div id="emailinputdescription">
