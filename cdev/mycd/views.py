@@ -15,8 +15,7 @@ def index(request):
 		if request.POST["email"]:
 			sub = NewsSubscriber(email=request.POST["email"])
 			sub.save()
-			return HttpResponseRedirect('http://customerdevelop.wufoo.com/forms/here-are-8-questions-i-need-your-help/')
-
+			return HttpResponseRedirect('http://customerdevelop.wufoo.com/forms/thanks-for-the-interest-now-i-need-your-help/')
 	return render_to_response('static/index.html', locals())
 
 def scrap(request):
