@@ -10,7 +10,7 @@ class ContactTagInline(admin.TabularInline):
     model = ContactTag
     extra = 5
     fields = ['name']
-
+    
 class SubstepInline(admin.TabularInline):
     model = Substep
     extra = 5
@@ -65,8 +65,9 @@ class QuestionAdmin(admin.ModelAdmin):
         return model.worksheet.user
     
 class ContactTagCategoryAdmin(admin.ModelAdmin):
-    inlines = ('ContactTagInline',)
-
+    inlines = [ContactTagInline]
+    fields = ('name',)
+    
 admin.site.register(Contact)
 admin.site.register(Answer)
 admin.site.register(Worksheet, WorksheetAdmin)
