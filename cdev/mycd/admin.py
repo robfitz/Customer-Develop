@@ -6,6 +6,11 @@ class QuestionInline(admin.TabularInline):
     extra = 5
     fields = ['order', 'prompt', 'field_rows', 'contact_tag']
 
+class ContactTagInline(admin.TabularInline):
+    model = ContactTag
+    extra = 5
+    fields = ['name']
+
 class SubstepInline(admin.TabularInline):
     model = Substep
     extra = 5
@@ -59,6 +64,9 @@ class QuestionAdmin(admin.ModelAdmin):
     def owner(self, model):
         return model.worksheet.user
     
+class ContactTagCategoryAdmin(admin.ModelAdmin):
+    inlines = ('ContactTagInline',)
+
 admin.site.register(Contact)
 admin.site.register(Answer)
 admin.site.register(Worksheet, WorksheetAdmin)
@@ -67,5 +75,5 @@ admin.site.register(Substep, SubstepAdmin)
 admin.site.register(SubstepCategory, SubstepCategoryAdmin)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(ContactTag)
-admin.site.register(ContactTagCategory)
+admin.site.register(ContactTagCategory, ContactTagCategoryAdmin)
 admin.site.register(NewsSubscriber)
