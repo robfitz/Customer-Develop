@@ -7,16 +7,15 @@
 
    	$(document).ready(function(){
 		$(".tag").click(function(event){
-		//	alert("As you can see, the link no longer took you to jquery.com");
 			event.preventDefault();
 		});
 		$(".tag_unassigned").click(function(event){
-		//	alert("As you can see, the link no longer took you to jquery.com");
 			event.preventDefault();
 		});
 	});
 
 	function toggleTag(tag_id) {
+
 		var checkbox = $("#cb_" + tag_id);
 		checkbox.trigger('click');
 
@@ -64,42 +63,42 @@
 {% block content %}
 
 	<form method='post' action='.'>
-	<div id="left">
-		<h2>Contact details</h2>
-		<textarea name='data' id='data' rows="10" style="width:100%">{{ contact.data }}</textarea>
-		<br />
-		<select name='state' id='state'>
-			<option id="Uncontacted">Uncontacted</option>
-			<option id="Active">Active</option>
-			<option id="Friendly">Friendly</option>
-			<option id="Dead">Dead</option>
-		</select>
-		<br />
-	</div>
-	<div id="center">
-		<h2>Status</h2>
-	</div>
-	<div id="right" class="medium">
-		<h2>Role tags</h2>
-		{% for tag_category in contact.tags %}
-			<div style="float:left;margin-right:8px">
-				{{ tag_category }}
-			</div>
-			<div style="float:left;">
-				{% for tag in tag_category.tags %}
-				<p style="margin-top:0px;margin-bottom:8px">
-				<a href="." class="tag{% if tag.is_active %}{% else %}_unassigned{% endif %}" id="a_{{ tag.pk }}" onclick="toggleTag({{ tag.pk }})">{{ tag.name }}</a>
-				<input name="tag_{{ tag.pk }}" id="cb_{{ tag.pk }}" {% if tag.is_active %}checked="true"{% endif %} class="invisible" type="checkbox">
-				</p>
-				{% endfor %}
-			</div>
-			<div id="right" style="padding:0px;height:margin-bottom:8px;">&nbsp</div>
+		<div id="left">
+			<h2>Contact details</h2>
+			<textarea name='data' id='data' rows="10" style="width:100%">{{ contact.data }}</textarea>
+			<br />
+			<select name='state' id='state'>
+				<option id="Uncontacted">Uncontacted</option>
+				<option id="Active">Active</option>
+				<option id="Friendly">Friendly</option>
+				<option id="Dead">Dead</option>
+			</select>
+			<br />
+		</div>
+		<div id="center">
+			<h2>Status</h2>
+		</div>
+		<div id="right" class="medium">
+			<h2>Role tags</h2>
+			{% for tag_category in contact.tags %}
+				<div style="float:left;margin-right:8px">
+					{{ tag_category }}
+				</div>
+				<div style="float:left;">
+					{% for tag in tag_category.tags %}
+					<p style="margin-top:0px;margin-bottom:8px">
+					<a href="." class="tag{% if tag.is_active %}{% else %}_unassigned{% endif %}" id="a_{{ tag.pk }}" onclick="toggleTag({{ tag.pk }})">{{ tag.name }}</a>
+					<input name="tag_{{ tag.pk }}" id="cb_{{ tag.pk }}" {% if tag.is_active %}checked="true"{% endif %} class="invisible" type="checkbox">
+					</p>
+					{% endfor %}
+				</div>
+				<div id="right" style="padding:0px;height:margin-bottom:8px;">&nbsp</div>
 
-		{% endfor %}
-	</div>
-	<div id="wide">
-		<input style="float:left" type="submit" value="Save" />
-	</div>
+			{% endfor %}
+		</div>
+		<div id="wide">
+			<input style="float:left" type="submit" value="Save" />
+		</div>
 
 	</form>
 {% endblock %}

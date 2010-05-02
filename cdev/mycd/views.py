@@ -25,11 +25,11 @@ def contactList(request):
 	if not request.user.is_authenticated():
 		return HttpResponseRedirect("/dashboard/")
 
-	
 	breadcrumbs = [{'name':'Dashboard', 'url':'/dashboard'},
 				   {'name':'Contacts', 'url':'/contacts'}]				   
 	
 	contacts = Contact.objects.filter(owner=request.user)
+
 	return render_to_response('crm/summary.html', locals())
 
 def editContact(request, contact_id):
@@ -47,37 +47,47 @@ def editContact(request, contact_id):
 	else:
 		#populate form w/ existing model
 		contact = Contact.objects.filter(owner=request.user).get(pk=contact_id)
+				
 		if not contact:
 			return HttpResponseRedirect("/contacts/")
+
+	categories = ContactTagCategory.objects.all()
+	for category in categories:
+		category.tags = ContactTag.objects.filter(category=category)
+		for t in category.tags:
+			if contact in t.contacts.all():
+				t.is_active=True
 
 	if request.method == 'POST' and len(request.POST.keys()) > 0:
 		#grab stuff from form
 		if request.POST['data']:
 			data = request.POST['data']
-			contact = contact.fromText(data)
+			contact.fromText(data)
 		if request.POST['state']:
 			contact.state = request.POST['state']
 		
-		tags = ContactTag.objects.filter(contact=contact)
-		for t in tags:
-			t.is_active = False
-			t.save()
-			
+		active_tags = []
 		for key in request.POST.keys():
 			if key.startswith('tag_'):
 				id = key[4:]
-				print 'id:' + id
-				active_tag = ContactTag.objects.get(id=id)
-				print '*** making active tag: ' + unicode(active_tag.id)
-				active_tag.is_active = True
-				active_tag.save()
+				tag = ContactTag.objects.get(id=id)
+				tag.contacts.add(contact)
+				tag.save()
+				active_tags.append(tag)
+
+		tags = ContactTag.objects.all()
+		for t in tags:
+			if not t in active_tags:
+				try: t.contacts.remove(contact)
+				except: pass
+			t.save()
 		
 		contact.save()
 		
 		return HttpResponseRedirect("/contacts/")
 		
 	contact.data = contact.toText()
-	contact.tags = contact.tagData()
+	contact.tags = categories
 	
 	return render_to_response('crm/edit.html', locals())
 
@@ -256,6 +266,7 @@ def worksheet(request, worksheet_id):
 
 		questions.append(form);
 		
+		"""
 		if q.contact_tag:
 			matchingTags = ContactTag.objects.filter(name=q.contact_tag.name).filter(category=q.contact_tag.category).filter(is_active=True)
 			tagContacts = []
@@ -264,7 +275,7 @@ def worksheet(request, worksheet_id):
 					tagContacts.append(t.contact)
 			num = len(tagContacts)
 			q.field_note = "You currently have <b>" + str(num) + " contacts</b> of this type. Enter additional names below to add more."
-
+		"""
 
 	#if worksheet.custom_template:
 	#   return render_to_response(worksheet.custom_template, locals())

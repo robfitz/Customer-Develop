@@ -37,31 +37,11 @@ class Contact(models.Model):
 		return self.name
 
 	def active_tags(self):
-		tags = ContactTag.objects.filter(contact=self).filter(is_active=True)
+		tags = 	ContactTag.objects.filter(contacts__pk=self.pk)
 		print 'active tags ***'
 		print tags
 		return tags
 
-	def tagData(self):
-		#get all models applied to this particular contact
-		categories = ContactTagCategory.objects.filter()
-		tags = ContactTag.objects.filter(contact=self)
-		
-		print tags
-		
-		if len(tags) == 0:
-			#initialize tags
-			base_tags = ContactTag.objects.filter(contact=None)
-			for t in base_tags:
-				print 'copying tag: ' + str(t)
-				t2 = ContactTag(name=t.name, category=t.category, contact=self)
-				t2.save()		
-				tags = ContactTag.objects.filter(contact=self)
-			
-		for category in categories:
-			category.tags = ContactTag.objects.filter(contact=self, category=category)
-		return categories
-		
 	def getMiscFields(self):
 		return (self.twitter, 
 			self.linked_in, 
@@ -147,8 +127,7 @@ class ContactTagCategory(models.Model):
 class ContactTag(models.Model):
 	name = models.CharField(max_length=50)
 	category = models.ForeignKey(ContactTagCategory)
-	contact = models.ForeignKey(Contact, null=True, blank=True)
-	is_active = models.BooleanField(default=False)
+	contacts = models.ManyToManyField(Contact, blank=True, null=True)
 	
 	def __unicode__(self):
 		if self.category: return unicode(self.category) + ' - ' + self.name
